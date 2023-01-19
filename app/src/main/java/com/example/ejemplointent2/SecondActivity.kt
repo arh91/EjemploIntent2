@@ -16,18 +16,6 @@ class SecondActivity : AppCompatActivity() {
         // Recoge el Intent que ha iniciado la actividad
         val intent = getIntent()
 
-        //val b: Bundle = intent.getExtras()
-
-        /*if (b != null) {
-            val prov = b.get("proveedor") as String
-            val cl = b.get("cliente") as String
-            proveedor.setText(prov)
-            cliente.setText(cl)
-        }*/
-        // Recoge el valor de tipo String pasado en el Intent
-        /*val valueP = intent.getIntExtra("proveedor",0)
-        val valueC = intent.getExtra("cliente")*/
-
         val proveedor = findViewById<TextView>(R.id.nombreProveedor)
         val cliente = findViewById<TextView>(R.id.nombreCliente)
 
@@ -39,8 +27,6 @@ class SecondActivity : AppCompatActivity() {
             proveedor.setText(prov)
             cliente.setText(cl)
         }
-        /*cliente.text = valueP.toString()
-        proveedor.text = valueC.toString()*/
 
 
         intent.putExtra("pregunta", "How are you?");

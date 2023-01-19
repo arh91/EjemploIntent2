@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "61792039175",
+    "firebase_url": "https://ejemplointent-default-rtdb.firebaseio.com",
+    "project_id": "ejemplointent",
+    "storage_bucket": "ejemplointent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61792039175:android:fe53c75cfe2d13f22295a2",
+        "android_client_info": {
+          "package_name": "com.example.ejemplointent2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61792039175-9dc7srmr6h5bl85vvib7e8nqfnarfscl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2124FfIeWh88Bkxmn2axOzuY4sF2_68Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61792039175-9dc7srmr6h5bl85vvib7e8nqfnarfscl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
