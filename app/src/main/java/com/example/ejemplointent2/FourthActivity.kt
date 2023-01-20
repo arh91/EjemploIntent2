@@ -75,9 +75,9 @@ class FourthActivity : AppCompatActivity() {
     private fun addDatatoFirebase(name: String, address: String, phone: String) {
         // below 3 lines of code is used to set
         // data in our object class.
-        prov.nombre(name)
-        prov.direccion(address)
-        prov.telefono(phone)
+        prov.nombre = name
+        prov.direccion = address
+        prov.telefono = phone
 
         // we are use add value event listener method
         // which is called with database reference.
