@@ -54,9 +54,9 @@ class FourthActivity : AppCompatActivity() {
         // adding on click listener for our button.
         btnEnviar!!.setOnClickListener {
             // getting text from our edittext fields.
-            val name: String = nombreProveedor.getText().toString()
-            val phone: String = telefonoProveedor.getText().toString()
-            val address: String = direccionProveedor.getText().toString()
+            var name: String = nombreProveedor.text.toString()
+            var phone: String = telefonoProveedor.text.toString()
+            var address: String = direccionProveedor.text.toString()
 
             // below line is for checking weather the
             // edittext fields are empty or not.
@@ -101,6 +101,4 @@ class FourthActivity : AppCompatActivity() {
     }
 }
 
-private operator fun String?.invoke(name: String) {
 
-}
