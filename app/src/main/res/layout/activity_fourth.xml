@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="107dp" />-->
 
     <EditText
-        android:id="@+id/editTextNombre"
+        android:id="@+id/edtNombreProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="180dp" />
 
     <EditText
-        android:id="@+id/editTextDireccion"
+        android:id="@+id/edtDireccionProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="283dp" />
 
     <EditText
-        android:id="@+id/editTextTelefono"
+        android:id="@+id/edtTelefonoProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
