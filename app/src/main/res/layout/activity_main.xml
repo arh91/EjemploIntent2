@@ -37,4 +37,12 @@
         app:layout_constraintBottom_toTopOf="@+id/originalTextView"
         app:layout_constraintStart_toStartOf="@+id/originalTextView" />
 
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="533dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.example.ejemplointent2.R
+import com.example.ejemplointent2.ThirdActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val gosecond = findViewById<Button>(R.id.askMeBtn)
+        val registro = findViewById<Button>(R.id.btnRegistro)
 
         gosecond.setOnClickListener{
             // Crea un Intent para iniciar la segunda actividad
@@ -32,6 +34,14 @@ class MainActivity : AppCompatActivity() {
 
             startActivityForResult(intent, RESULTADO_DOS)
         }
+
+
+        registro.setOnClickListener{
+            val intentThird = Intent(this, ThirdActivity::class.java)
+            startActivity(intentThird)
+        }
+
+
 
     }
 
