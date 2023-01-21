@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val gosecond = findViewById<Button>(R.id.askMeBtn)
         val registro = findViewById<Button>(R.id.btnRegistro)
 

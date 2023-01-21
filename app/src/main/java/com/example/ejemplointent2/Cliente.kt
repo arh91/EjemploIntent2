@@ -3,7 +3,6 @@ package com.example.ejemplointent2
 class Cliente {
 
     var nombre: String? = null
-
         get() {
             //Llamada al getter de nombre
             return field

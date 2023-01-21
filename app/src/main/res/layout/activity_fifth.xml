@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="107dp" />-->
 
     <EditText
-        android:id="@+id/edtNombreProveedor"
+        android:id="@+id/edtNombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="180dp" />
 
     <EditText
-        android:id="@+id/edtDireccionProveedor"
+        android:id="@+id/edtDireccionCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="283dp" />
 
     <EditText
-        android:id="@+id/edtTelefonoProveedor"
+        android:id="@+id/edtTelefonoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteY="387dp" />
 
     <Button
-        android:id="@+id/btnEnviar"
+        android:id="@+id/btnEnviarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enviar"

@@ -27,12 +27,12 @@ class FourthActivity : AppCompatActivity() {
 
     // creating a variable for
     // our object class
-    var prov: Proveedor? = null
+    var prov: Cliente? = null
 
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_fourth)
 
         // initializing our edittext and button
         nombreProveedor = findViewById<EditText>(R.id.edtNombreProveedor)
@@ -44,11 +44,11 @@ class FourthActivity : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
 
         // below line is used to get reference for our database.
-        databaseReference = firebaseDatabase!!.getReference("EmployeeInfo")
+        databaseReference = firebaseDatabase!!.getReference("Proveedores")
 
         // initializing our object
         // class variable.
-        prov = Proveedor()
+        prov = Cliente()
         btnEnviar = findViewById<Button>(R.id.btnEnviar)
 
         // adding on click listener for our button.
