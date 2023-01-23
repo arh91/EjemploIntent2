@@ -12,22 +12,22 @@ class FourthActivity : AppCompatActivity() {
 
     // creating variables for
     // EditText and buttons.
-    private var nombreProveedor: EditText? = null
-    private var telefonoProveedor: EditText? = null
-    private var direccionProveedor: EditText? = null
-    private var btnEnviar: Button? = null
+    lateinit var nombreProveedor: EditText
+    lateinit var telefonoProveedor: EditText
+    lateinit var direccionProveedor: EditText
+    lateinit var btnEnviar: Button
 
     // creating a variable for our
     // Firebase Database.
-    var firebaseDatabase: FirebaseDatabase? = null
+    lateinit var firebaseDatabase: FirebaseDatabase
 
     // creating a variable for our Database
     // Reference for Firebase.
-    var databaseReference: DatabaseReference? = null
+    lateinit var databaseReference: DatabaseReference
 
     // creating a variable for
     // our object class
-    var prov: Cliente? = null
+    lateinit var prov: Proveedor
 
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +48,7 @@ class FourthActivity : AppCompatActivity() {
 
         // initializing our object
         // class variable.
-        prov = Cliente()
+        prov = Proveedor()
         btnEnviar = findViewById<Button>(R.id.btnEnviar)
 
         // adding on click listener for our button.

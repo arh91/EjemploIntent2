@@ -11,22 +11,22 @@ import com.google.firebase.database.*
 class FifthActivity : AppCompatActivity() {
     // creating variables for
     // EditText and buttons.
-    private var nombreCliente: EditText? = null
-    private var telefonoCliente: EditText? = null
-    private var direccionCliente: EditText? = null
-    private var btnEnviar: Button? = null
+    lateinit var nombreCliente:EditText
+    lateinit var telefonoCliente: EditText
+    lateinit var direccionCliente: EditText
+    lateinit var btnEnviar: Button
 
     // creating a variable for our
     // Firebase Database.
-    var firebaseDatabase: FirebaseDatabase? = null
+    lateinit var firebaseDatabase: FirebaseDatabase
 
     // creating a variable for our Database
     // Reference for Firebase.
-    var databaseReference: DatabaseReference? = null
+    lateinit var databaseReference: DatabaseReference
 
     // creating a variable for
     // our object class
-    var cli: Cliente? = null
+    lateinit var cli: Cliente
 
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
