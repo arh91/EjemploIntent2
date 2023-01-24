@@ -54,4 +54,20 @@
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="577dp" />
 
+    <Button
+        android:id="@+id/btnOpcionesFifth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Más opciones"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="639dp" />
+
+    <Button
+        android:id="@+id/btnAtrasFifth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atrás"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="638dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
