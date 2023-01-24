@@ -51,23 +51,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enviar"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="577dp" />
-
-    <Button
-        android:id="@+id/btnOpcionesFifth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Más opciones"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="639dp" />
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="576dp" />
 
     <Button
         android:id="@+id/btnAtrasFifth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Atrás"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="638dp" />
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="576dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
