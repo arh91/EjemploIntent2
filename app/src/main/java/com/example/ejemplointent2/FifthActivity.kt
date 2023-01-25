@@ -52,11 +52,11 @@ class FifthActivity : AppCompatActivity() {
         // initializing our object
         // class variable.
         cli = Cliente()
-        insertarDatos = findViewById<Button>(R.id.btnEnviar)
+        insertarDatos = findViewById<Button>(R.id.btnEnviarCliente)
         atras = findViewById<Button>(R.id.btnAtrasFifth)
 
         // adding on click listener for our button.
-        insertarDatos!!.setOnClickListener {
+        insertarDatos.setOnClickListener {
             // getting text from our edittext fields.
             var name: String = nombreCliente.text.toString()
             var phone: String = telefonoCliente.text.toString()

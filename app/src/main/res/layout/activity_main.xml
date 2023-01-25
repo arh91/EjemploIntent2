@@ -13,17 +13,19 @@
         android:text="Welcome!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
 
     <Button
         android:id="@+id/askMeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:text="Ask Me"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/originalTextView" />
 
@@ -32,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="52dp"
         android:text="Go second!"
         app:layout_constraintBottom_toTopOf="@+id/originalTextView"
         app:layout_constraintStart_toStartOf="@+id/originalTextView" />
@@ -41,8 +43,21 @@
         android:id="@+id/btnRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="52dp"
         android:text="Registro"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="533dp" />
+        app:layout_constraintStart_toStartOf="@+id/askMeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/askMeBtn" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

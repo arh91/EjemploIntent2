@@ -1,4 +1,4 @@
-package com.dam2.ejemplosintent
+package com.example.ejemplointent2
 
 import android.app.Activity
 import android.content.Intent
@@ -41,15 +41,11 @@ class SecondActivity : AppCompatActivity() {
         Log.d("MENSAJES", "actualizado resultado")
 
         val btnGoFirst = findViewById<Button>(R.id.btnGoFirst)
-        val nuevo = findViewById<Button>(R.id.btnNuevo)
 
         btnGoFirst.setOnClickListener{
             finish()
         }
 
-        nuevo.setOnClickListener{
-            val toThird = Intent(this, ThirdActivity::class.java)
-            startActivity(toThird)
-        }
+
     }
 }

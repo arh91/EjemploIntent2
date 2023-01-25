@@ -56,7 +56,7 @@ class FourthActivity : AppCompatActivity() {
         atras = findViewById<Button>(R.id.btnAtrasFourth)
 
         // adding on click listener for our button.
-        insertarDatos!!.setOnClickListener {
+        insertarDatos.setOnClickListener {
             // getting text from our edittext fields.
             var name: String = nombreProveedor.text.toString()
             var phone: String = telefonoProveedor.text.toString()

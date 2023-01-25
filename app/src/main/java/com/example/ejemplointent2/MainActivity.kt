@@ -1,4 +1,4 @@
-package com.dam2.ejemplosintent
+package com.example.ejemplointent2
 
 import android.app.Activity
 import android.content.Intent
@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val gosecond = findViewById<Button>(R.id.askMeBtn)
         val registro = findViewById<Button>(R.id.btnRegistro)
+        val salir = findViewById<Button>(R.id.btnSalir)
 
         gosecond.setOnClickListener{
             // Crea un Intent para iniciar la segunda actividad
@@ -41,6 +42,12 @@ class MainActivity : AppCompatActivity() {
             val intentThird = Intent(this, ThirdActivity::class.java)
             startActivity(intentThird)
         }
+
+        salir.setOnClickListener{
+            finishAffinity()
+        }
+
+
 
 
 
