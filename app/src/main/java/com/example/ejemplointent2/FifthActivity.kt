@@ -62,14 +62,15 @@ class FifthActivity : AppCompatActivity() {
 
             // below line is for checking weather the
             // edittext fields are empty or not.
-            if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phone) && TextUtils.isEmpty(address)) {
+            if (TextUtils.isEmpty(code) || TextUtils.isEmpty(name) || TextUtils.isEmpty(phone) || TextUtils.isEmpty(address)) {
                 // if the text fields are empty
                 // then show the below message.
-                Toast.makeText(this@FifthActivity, "Por favor, introduce los datos que quieres guardar.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@FifthActivity, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
             } else {
                 // else call the method to add
                 // data to our database.
                 addDatatoFirebase(code, name, address, phone)
+                clearFields()
             }
         }
 
@@ -105,5 +106,12 @@ class FifthActivity : AppCompatActivity() {
                 Toast.makeText(this@FifthActivity, "No se pudieron guardar los datos $error", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    fun clearFields(){
+       codigoCliente.setText("")
+       nombreCliente.setText("")
+       direccionCliente.setText("")
+       telefonoCliente.setText("")
     }
 }
