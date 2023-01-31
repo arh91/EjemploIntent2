@@ -46,13 +46,6 @@ class Cliente {
             field = nuevoTelefono
         }
 
-    /*constructor(direccion: String?, nombre: String?, telefono: String?) {
-        this.direccion = direccion
-        this.nombre = nombre
-        this.telefono = telefono
-    }*/
-
-    constructor() {}
 
     constructor(codigo: String?, nombre: String?, direccion: String?, telefono: String?) {
         this.codigo = codigo
@@ -60,5 +53,7 @@ class Cliente {
         this.direccion = direccion
         this.telefono = telefono
     }
+
+    constructor() {}
 
 }
