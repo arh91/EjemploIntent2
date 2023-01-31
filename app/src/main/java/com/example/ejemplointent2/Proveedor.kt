@@ -4,11 +4,11 @@ class Proveedor {
 
     var codigo: String? = null
         get() {
-            //Llamada al getter de nombre
+            //Llamada al getter de codigo
             return field
         }
         set(nuevoCodigo) {
-            //Llamada al setter de nombre
+            //Llamada al setter de codigo
             field = nuevoCodigo
         }
 
@@ -45,6 +45,10 @@ class Proveedor {
             //Llamada al setter de telefono
             field = nuevoTelefono
         }
+
+
+
+    //Constructores
 
     constructor(codigo: String?, nombre: String?, direccion: String?, telefono: String?) {
         this.codigo = codigo
