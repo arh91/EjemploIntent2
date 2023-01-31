@@ -6,32 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".FourthActivity">
 
-    <!--<EditText
-        android:id="@+id/editTextCodigo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Código"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="107dp" />-->
-
     <EditText
-        android:id="@+id/edtNombreProveedor"
+        android:id="@+id/edtCodigoProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
         android:ems="10"
-        android:hint="Nombre"
+        android:hint="Código"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/edtNombreProveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/edtCodigoProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigoProveedor" />
+
+    <EditText
         android:id="@+id/edtDireccionProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Dirección"
@@ -70,4 +72,5 @@
         android:text="Atrás"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

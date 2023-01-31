@@ -12,6 +12,7 @@ import com.google.firebase.database.*
 class FifthActivity : AppCompatActivity() {
     // creating variables for
     // EditText and buttons.
+    lateinit var codigoCliente:EditText
     lateinit var nombreCliente:EditText
     lateinit var telefonoCliente: EditText
     lateinit var direccionCliente: EditText
@@ -27,17 +28,13 @@ class FifthActivity : AppCompatActivity() {
     // Reference for Firebase.
     lateinit var databaseReference: DatabaseReference
 
-    // creating a variable for
-    // our object class
-    lateinit var cli: Cliente
-
-
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fifth)
 
         // initializing our edittext and button
+        codigoCliente = findViewById<EditText>(R.id.edtCodigoCliente)
         nombreCliente = findViewById<EditText>(R.id.edtNombreCliente)
         telefonoCliente = findViewById<EditText>(R.id.edtTelefonoCliente)
         direccionCliente = findViewById<EditText>(R.id.edtDireccionCliente)
@@ -47,17 +44,18 @@ class FifthActivity : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
 
         // below line is used to get reference for our database.
-        databaseReference = firebaseDatabase!!.getReference("Clientes")
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase")
 
         // initializing our object
         // class variable.
-        cli = Cliente()
+
         insertarDatos = findViewById<Button>(R.id.btnEnviarCliente)
         atras = findViewById<Button>(R.id.btnAtrasFifth)
 
         // adding on click listener for our button.
         insertarDatos.setOnClickListener {
             // getting text from our edittext fields.
+            var code: String = codigoCliente.text.toString()
             var name: String = nombreCliente.text.toString()
             var phone: String = telefonoCliente.text.toString()
             var address: String = direccionCliente.text.toString()
@@ -67,11 +65,11 @@ class FifthActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phone) && TextUtils.isEmpty(address)) {
                 // if the text fields are empty
                 // then show the below message.
-                Toast.makeText(this@FifthActivity, "Please add some data.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@FifthActivity, "Por favor, introduce los datos que quieres guardar.", Toast.LENGTH_SHORT).show()
             } else {
                 // else call the method to add
                 // data to our database.
-                addDatatoFirebase(name, address, phone)
+                addDatatoFirebase(code, name, address, phone)
             }
         }
 
@@ -81,12 +79,12 @@ class FifthActivity : AppCompatActivity() {
         }
     }
 
-    private fun addDatatoFirebase(name: String, address: String, phone: String) {
+    private fun addDatatoFirebase(code: String, name: String, address: String, phone: String) {
         // below 3 lines of code is used to set
         // data in our object class.
-        cli.nombre = name
-        cli.direccion = address
-        cli.telefono = phone
+
+        val cliente = Cliente(code, name, address, phone)
+
 
         // we are use add value event listener method
         // which is called with database reference.
@@ -95,16 +93,16 @@ class FifthActivity : AppCompatActivity() {
                 // inside the method of on Data change we are setting
                 // our object class to our database reference.
                 // data base reference will sends data to firebase.
-                databaseReference.setValue(cli)
+                databaseReference.child("Clientes").child(code).setValue(cliente)
 
                 // after adding this data we are showing toast message.
-                Toast.makeText(this@FifthActivity, "data added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@FifthActivity, "Datos guardados", Toast.LENGTH_SHORT).show()
             }
 
             override fun onCancelled(error: DatabaseError) {
                 // if the data is not added or it is cancelled then
                 // we are displaying a failure toast message.
-                Toast.makeText(this@FifthActivity, "Fail to add data $error", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@FifthActivity, "No se pudieron guardar los datos $error", Toast.LENGTH_SHORT).show()
             }
         })
     }
